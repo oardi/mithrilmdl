@@ -1,5 +1,8 @@
 # Material Design Lite Components for MithrilJs
 
+## Documentation and examples
+[http://mithril-mdl.muchadev.com](http://mithril-mdl.muchadev.com)
+
 ## Installation
 ### Github
 `npm install https://github.com/oardi/mithril-mdl --save`

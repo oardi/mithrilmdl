@@ -1,0 +1,12 @@
+{
+	"name": "mithril-mdl",
+	"version": "0.6.7",
+	"description": "Collection of reusable Material Design Lite components to build modern web browser applications through MithrilJs 1.x.",
+	"main": "mithrilmdl.js",
+	"author": "Ardian Shala",
+	"license": "MIT",
+	"dependencies": {
+		"material-design-lite": "1.3.0",
+		"mithril": "1.1.3"
+	}
+}

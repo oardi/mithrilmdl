@@ -7,23 +7,35 @@
 * Standalone + Hyperscript - [https://jsfiddle.net/oardi/ue9ouymq/](https://jsfiddle.net/oardi/ue9ouymq/)
 * Babel + JSX - [https://jsfiddle.net/oardi/qb7sq6yz/](https://jsfiddle.net/oardi/qb7sq6yz/)
 
+
+## Include Fonts
+Include Google Material Design Icons from Google CDN: <br/>
+`<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
+
 ## Installation
 ### Github
 `npm install https://github.com/oardi/mithril-mdl --save`
 
-### Npm
-`comming soon`
+### Standalone
+Download the library from this repository and include the script into your HTML.
 
 
 ## Usage
 ### Webpack
+Import the single Object "Mdl" from "mithril-mdl": <br/>
 `import { Mdl } from 'mithril-mdl'`
 
 ### Standalone
-create an index.html and add the scripts "mihtriljs" and "mithrilmdl" and create a const from "mithrilmdl". <br/>
+Create an index.html and add the scripts "mihtriljs" and "mithrilmdl" and create a const from "mithrilmdl". <br/>
 ```js
 const { Mdl } = window.mithrilmdl;
 
 <script src="libs/mithril.js"></script>
 <script src="libs/mithrilmdl.js"></script>
 ```
+
+### Using a component
+For instance using the Mdl.Button component: <br/>
+Code: <br/>
+`<Mdl.Button raised colored title="I am a button" />`

@@ -37,5 +37,13 @@ const { Mdl } = window.mithrilmdl;
 
 ### Using a component
 For instance using the Mdl.Button component: <br/>
-Code: <br/>
-`<Mdl.Button raised colored title="I am a button" />`
+Code JSX: <br/>
+```js
+<Mdl.Button raised colored title="I am a button" />
+```
+<br/>
+
+Code ES5: <br/>
+```js
+m(Mdl.Button, { raised:true, colored:true, title:"I am a button" })
+```

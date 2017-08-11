@@ -14,6 +14,10 @@ Include Google Material Design Icons from Google CDN: <br/>
 
 
 ## Installation
+
+### NPM
+`npm install mithrilmdl --save`
+
 ### Github
 `npm install https://github.com/oardi/mithrilmdl --save`
 

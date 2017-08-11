@@ -15,7 +15,7 @@ Include Google Material Design Icons from Google CDN: <br/>
 
 ## Installation
 ### Github
-`npm install https://github.com/oardi/mithril-mdl --save`
+`npm install https://github.com/oardi/mithrilmdl --save`
 
 ### Standalone
 Download the library from this repository and include the script into your HTML.
@@ -23,8 +23,8 @@ Download the library from this repository and include the script into your HTML.
 
 ## Usage
 ### Webpack
-Import the single Object "Mdl" from "mithril-mdl": <br/>
-`import { Mdl } from 'mithril-mdl'`
+Import the single Object "Mdl" from "mithrilmdl": <br/>
+`import { Mdl } from 'mithrilmdl'`
 
 ### Standalone
 Create an index.html and add the scripts "mihtriljs" and "mithrilmdl" and create a const from "mithrilmdl". <br/>

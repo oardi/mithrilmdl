@@ -1,12 +1,41 @@
 {
 	"name": "mithrilmdl",
-	"version": "0.7.2",
+	"version": "0.8.0",
 	"description": "Collection of reusable Material Design Lite components to build modern web browser applications through MithrilJs 1.x.",
-	"main": "mithrilmdl.js",
+	"main": "src/index.js",
 	"author": "Ardian Shala",
 	"license": "MIT",
+	"homepage": "http://mithril-mdl.muchadev.com",
+	"scripts": {
+		"build": "webpack -p"
+	},
 	"dependencies": {
 		"material-design-lite": "1.3.0",
-		"mithril": "1.1.3"
+		"mithril": "1.1.3",
+		"dialog-polyfill": "^0.4.8"
+	},
+	"devDependencies": {
+		"babel-cli": "6.24.1",
+		"babel-core": "6.25.0",
+		"babel-loader": "7.0.0",
+		"babel-plugin-transform-async-to-generator": "6.24.1",
+		"babel-plugin-transform-react-jsx": "6.24.1",
+		"babel-polyfill": "6.23.0",
+		"babel-preset-es2015": "6.24.1",
+		"css-loader": "0.28.4",
+		"file-loader": "0.11.2",
+		"node-sass": "4.5.3",
+		"sass-loader": "6.0.5",
+		"style-loader": "0.18.2",
+		"webpack": "2.6.1",
+		"webpack-dev-server": "2.4.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oardi/mithrilmdl"
+	},
+	"bugs": {
+		"url": "https://github.com/oardi/mithrilmdl/issues",
+		"email": "info@muchadev.com"
 	}
 }

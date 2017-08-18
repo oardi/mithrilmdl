@@ -6,6 +6,7 @@
 ## JsFiddle Examples
 * Standalone + Hyperscript - [https://jsfiddle.net/oardi/ue9ouymq/](https://jsfiddle.net/oardi/ue9ouymq/)
 * Babel + JSX - [https://jsfiddle.net/oardi/qb7sq6yz/](https://jsfiddle.net/oardi/qb7sq6yz/)
+* Babel + JSX Drawer - [https://jsfiddle.net/oardi/o8ag2hy9/](https://jsfiddle.net/oardi/o8ag2hy9/)
 
 
 ## Include Fonts
@@ -22,7 +23,7 @@ Include Google Material Design Icons from Google CDN: <br/>
 `npm install https://github.com/oardi/mithrilmdl --save`
 
 ### Standalone
-Download the library from this repository and include the script into your HTML.
+Use the bundle inside "dist" from this repository and include the script into your HTML.
 
 
 ## Usage

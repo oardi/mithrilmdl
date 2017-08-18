@@ -1,5 +1,10 @@
-## v0.7.2 - Added Chip Component
+## v0.8.0 - Releasing Sources
+### Added Material Design Lite Components
 
+* Slider (custom)
+
+
+## v0.7.2 - Added Chip Component
 ### Material Design Lite Components
 
 * Chip
@@ -10,6 +15,7 @@
 ### Change:
 
 * Renaming Package name to "mithrilmdl" to avoid conflict with extisting other package.
+* Integrating modal polyfill for cross browser support.
 
 
 ## v0.6.8 - Package Fix

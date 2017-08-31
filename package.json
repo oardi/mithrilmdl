@@ -1,6 +1,6 @@
 {
 	"name": "mithrilmdl",
-	"version": "0.8.0",
+	"version": "0.9.0",
 	"description": "Collection of reusable Material Design Lite components to build modern web browser applications through MithrilJs 1.x.",
 	"main": "src/index.js",
 	"author": "Ardian Shala",

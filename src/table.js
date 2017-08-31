@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlTable extends MdlBase {
+export class Table extends Base {
     oninit(vnode) {
         this.classList.push("mdl-data-table", "mdl-js-data-table", "mdl-shadow--2dp");
         vnode.attrs.selectable ? this.classList.push("mdl-data-table--selectable") : null;

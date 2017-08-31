@@ -1,11 +1,11 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
-import { MdlSpinner } from './mdl-spinner';
+import { Base } from './base';
+import { Spinner } from './spinner';
 
 import 'dialog-polyfill/dialog-polyfill.css';
 import * as dialogPolyfill from 'dialog-polyfill/dialog-polyfill.js';
 
-export class MdlDialog extends MdlBase {
+export class Dialog extends Base {
     oninit(vnode) { 
         super.oninit(vnode);
         this.vnode = vnode; 
@@ -40,7 +40,7 @@ export class MdlDialog extends MdlBase {
 }
 
 
-export class MdlDialogService {
+export class DialogService {
     constructor() {
     }
 
@@ -94,7 +94,7 @@ export class MdlDialogService {
         dialogActions.setAttribute("hidden", "hidden");
 
         dialogContent.removeAttribute("hidden");
-        m.render(dialogContent, <MdlSpinner active singlecolor />);
+        m.render(dialogContent, <Spinner active singlecolor />);
 
         componentHandler.upgradeElement(document.querySelector(".mdl-js-spinner"));//hack for spinner showing correctly 
         dialog.showModal();

@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlTextField extends MdlBase {
+export class TextField extends Base {
     constructor() {
         super();
         this.vnode;
@@ -25,7 +25,7 @@ export class MdlTextField extends MdlBase {
 }
 
 
-export class MdlTextFieldInput extends MdlBase {
+export class TextFieldInput extends Base {
     constructor() {
         super();
         this.dom;
@@ -38,20 +38,17 @@ export class MdlTextFieldInput extends MdlBase {
 
     oncreate(vnode) {
         this.dom = vnode.dom;
-        //this.vnode = vnode;
         let oldValue = vnode.dom.value;
-        //let oldValue = vnode.attrs.value;
 
         this.intervalCheck = setInterval(() => {
             let newVal = vnode.dom.value;
-            //let newVal = vnode.attrs.value;
 
             if (oldValue != newVal) {
                 this.updateTextField();
                 window.clearInterval(this.intervalCheck);//clear interval
                 //https://stackoverflow.com/questions/2901108/how-do-i-clear-this-setinterval
             }
-        }, 300);//300 ok?, evtl. mit timeout final entfernen?
+        }, 300);
 
         setTimeout(() => {
             if (this.intervalCheck) window.clearInterval(this.intervalCheck);//final clear after 10 sec
@@ -89,7 +86,7 @@ export class MdlTextFieldInput extends MdlBase {
     }
 }
 
-export class MdlTextFieldLabel extends MdlBase {
+export class TextFieldLabel extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-textfield__label");
@@ -105,7 +102,7 @@ export class MdlTextFieldLabel extends MdlBase {
     }
 }
 
-export class MdlTextFieldError extends MdlBase {
+export class TextFieldError extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-textfield__error");

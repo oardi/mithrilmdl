@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlBadge extends MdlBase {
+export class Badge extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-badge");

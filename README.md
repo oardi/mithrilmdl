@@ -11,44 +11,105 @@
 
 ## Include Fonts
 Include Google Material Design Icons from Google CDN: <br/>
-`<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+```css
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
 
 
 ## Installation
 
 ### NPM
-`npm install mithrilmdl --save`
+```js
+npm install mithrilmdl --save
+```
 
 ### Github
-`npm install https://github.com/oardi/mithrilmdl --save`
+```js 
+npm install https://github.com/oardi/mithrilmdl --save
+```
 
 ### Standalone
 Use the bundle inside "dist" from this repository and include the script into your HTML.
 
 
 ## Usage
-### Webpack
-Import the single Object "Mdl" from "mithrilmdl": <br/>
-`import { Mdl } from 'mithrilmdl'`
 
 ### Standalone
 Create an index.html and add the scripts "mihtriljs" and "mithrilmdl" and create a const from "mithrilmdl". <br/>
-```js
-const { Mdl } = window.mithrilmdl;
 
+```html
 <script src="libs/mithril.js"></script>
 <script src="libs/mithrilmdl.js"></script>
+<script>
+    const { Button } = window.mithrilmdl;
+</script>
 ```
+
+
+### Webpack + Babel + JSX
+
+Steps:
+
+#### Create ".babelrc"
+```js
+{
+    "presets": ["es2015"],
+    "plugins": [
+        "transform-async-to-generator",
+        ["transform-react-jsx", {
+            "pragma": "m"
+        }]
+    ]
+}
+```
+
+#### Create a minimal "webpack.config.js"
+```js
+const webpack = require('webpack');
+const path = require('path');
+
+require("babel-core/register");
+require("babel-polyfill");//es5 polyfills
+
+module.exports = {
+    entry: ['babel-polyfill', './src/app/app.js'],
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: 'app.bundle.js',
+    },
+    devtool: 'source-map',
+    module: {
+        rules: [
+            { test: /\.js$/, loader: 'babel-loader' },
+            { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+            { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+            { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader?name=assets/[name].[ext]' },
+        ]
+    }
+}
+```
+
+#### Import the components needed from "mithrilmdl"
+```js
+import { Button } from 'mithrilmdl'
+```
+
+or as a single object
+```js
+import * as Mdl from 'mithrilmdl'
+```
+
 
 ### Using a component
 For instance using the Mdl.Button component: <br/>
 Code JSX: <br/>
+
 ```js
-<Mdl.Button raised colored title="I am a button" />
+<Button raised colored title="I am a button" />
 ```
 <br/>
 
 Code ES5: <br/>
 ```js
-m(Mdl.Button, { raised:true, colored:true, title:"I am a button" })
+m(Button, { raised:true, colored:true, title:"I am a button" })
 ```

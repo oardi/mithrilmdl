@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlLayout extends MdlBase {
+export class Layout extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout", "mdl-js-layout", "mdl-layout--fixed-header", "mdl-layout--no-drawer-button");
@@ -18,7 +18,7 @@ export class MdlLayout extends MdlBase {
     }
 }
 
-export class MdlLayoutHeader extends MdlBase {
+export class LayoutHeader extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout__header");
@@ -32,7 +32,7 @@ export class MdlLayoutHeader extends MdlBase {
     }
 }
 
-export class MdlLayoutHeaderRow extends MdlBase {
+export class LayoutHeaderRow extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout__header-row");
@@ -44,7 +44,7 @@ export class MdlLayoutHeaderRow extends MdlBase {
     }
 }
 
-export class MdlLayoutTitle extends MdlBase {
+export class LayoutTitle extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout-title");
@@ -58,7 +58,7 @@ export class MdlLayoutTitle extends MdlBase {
     }
 }
 
-export class MdlLayoutContent extends MdlBase {
+export class LayoutContent extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout__content");
@@ -74,8 +74,8 @@ export class MdlLayoutContent extends MdlBase {
     }
 }
 
-import { MdlNavigation } from './mdl-navigation';
-export class MdlLayoutDrawer extends MdlBase {
+import { Navigation } from './navigation';
+export class LayoutDrawer extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout__drawer");
@@ -98,7 +98,7 @@ export class MdlLayoutDrawer extends MdlBase {
     }
 }
 
-export class MdlLayoutSpacer extends MdlBase {
+export class LayoutSpacer extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-layout-spacer");

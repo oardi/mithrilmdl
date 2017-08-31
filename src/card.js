@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlCard extends MdlBase {
+export class Card extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-card", "mdl-shadow--2dp");
@@ -12,25 +12,25 @@ export class MdlCard extends MdlBase {
             <div class={this.classList.join(" ")}>
                 {
                     vnode.attrs.title ?
-                        <MdlCardTitle title={vnode.attrs.title} subtitle={vnode.attrs.subtitle} />
+                        <CardTitle title={vnode.attrs.title} subtitle={vnode.attrs.subtitle} />
                         : null
                 }
 
                 {
                     vnode.attrs.text ?
-                        <MdlCardSupportingText text={vnode.attrs.text} />
+                        <CardSupportingText text={vnode.attrs.text} />
                         : null
                 }
 
                 {
                     vnode.attrs.actions ?
-                        <MdlCardActions>{vnode.attrs.actions}</MdlCardActions>
+                        <CardActions>{vnode.attrs.actions}</CardActions>
                         : null
                 }
 
                 {
                     vnode.attrs.menu ?
-                        <MdlCardMenu>{vnode.attrs.menu}</MdlCardMenu>
+                        <CardMenu>{vnode.attrs.menu}</CardMenu>
                         : null
                 }
 
@@ -40,19 +40,19 @@ export class MdlCard extends MdlBase {
     }
 }
 
-export class MdlCardTitle {
+export class CardTitle {
 
     view(vnode) {
         return (
             <div class="mdl-card__title mdl-card--expand">
-                {vnode.attrs.title ? <MdlCardTitleText title={vnode.attrs.title} /> : null}
-                {vnode.attrs.subtitle ? <MdlCardSubtitleText subtitle={vnode.attrs.subtitle} /> : null}
+                {vnode.attrs.title ? <CardTitleText title={vnode.attrs.title} /> : null}
+                {vnode.attrs.subtitle ? <CardSubtitleText subtitle={vnode.attrs.subtitle} /> : null}
             </div>
         )
     }
 }
 
-export class MdlCardTitleText {
+export class CardTitleText {
     view(vnode) {
         return (
             <h2 class="mdl-card__title-text">{vnode.attrs.title}</h2>
@@ -60,7 +60,7 @@ export class MdlCardTitleText {
     }
 }
 
-export class MdlCardSubtitleText {
+export class CardSubtitleText {
     view(vnode) {
         return (
             <div class="mdl-card__subtitle-text">{vnode.attrs.subtitle}</div>
@@ -68,7 +68,7 @@ export class MdlCardSubtitleText {
     }
 }
 
-export class MdlCardSupportingText {
+export class CardSupportingText {
     view(vnode) {
         return (
             <div
@@ -82,7 +82,7 @@ export class MdlCardSupportingText {
     }
 }
 
-export class MdlCardActions { // mdl-card--border
+export class CardActions { // mdl-card--border
     oninit(vnode) {
         this.classList = ["mdl-card__actions"];
         vnode.attrs.border ? this.classList.push("mdl-card--border") : null;
@@ -100,7 +100,7 @@ export class MdlCardActions { // mdl-card--border
     }
 }
 
-export class MdlCardMenu {
+export class CardMenu {
     view(vnode) {
         return (
             <div class="mdl-card__menu">

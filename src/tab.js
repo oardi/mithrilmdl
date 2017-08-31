@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlTabs extends MdlBase {
+export class Tabs extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-tabs", "mdl-js-tabs", "mdl-js-ripple-effect");
@@ -16,7 +16,7 @@ export class MdlTabs extends MdlBase {
     }
 }
 
-export class MdlTabBar extends MdlBase {
+export class TabBar extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-tabs__tab-bar");
@@ -31,7 +31,7 @@ export class MdlTabBar extends MdlBase {
     }
 }
 
-export class MdlTab extends MdlBase {
+export class Tab extends Base {
     oninit(vnode) {
         this.classList.push("mdl-tabs__tab");
         vnode.attrs.active ? this.classList.push("is-active") : null;
@@ -50,9 +50,9 @@ export class MdlTab extends MdlBase {
     }
 }
 
-export class MdlTabPanel extends MdlBase {
+export class TabPanel extends Base {
     oninit(vnode) {
-        this.classList = ["mdl-tabs__panel"];
+        this.classList.push("mdl-tabs__panel");
         vnode.attrs.active ? this.classList.push("is-active") : null;
     }
 

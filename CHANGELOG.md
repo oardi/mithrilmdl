@@ -1,3 +1,13 @@
+## v0.9.0 - Breaking Change
+### Change:
+
+* Each component can be imported from 'mithrilmdl'
+* a single object can be created by your own -> import * as Mdl from 'mithrilmdl';
+
+Fix
+* Slider min and max value are now dynamic
+
+
 ## v0.8.0 - Releasing Sources
 ### Added Material Design Lite Components
 

@@ -1,6 +1,6 @@
 import m from 'mithril';//kann hier eigtl. weg, oder in children weg
 
-export class MdlBase {
+export class Base {
     constructor() {
         this.classList = [];
         this.id;

@@ -1,8 +1,8 @@
 import m from 'mithril';
-import { MdlIcon } from './mdl-icon';
-import { MdlBase } from './mdl-base';
+import { Icon } from './icon';
+import { Base } from './base';
 
-export class MdlButton extends MdlBase {
+export class Button extends Base {
     oninit(vnode) {
         super.oninit(vnode);
 
@@ -26,7 +26,7 @@ export class MdlButton extends MdlBase {
                 {...attributes}
             >
                 {
-                    vnode.attrs.icon && vnode.children.length == 0 ? <MdlIcon icon={vnode.attrs.icon} /> :
+                    vnode.attrs.icon && vnode.children.length == 0 ? <Icon icon={vnode.attrs.icon} /> :
                         vnode.attrs.title ? vnode.attrs.title : vnode.children
                 }
             </button>

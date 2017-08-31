@@ -1,15 +1,14 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlSlider extends MdlBase {
+export class Slider extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("custom-slider");
 
         this.attributes = {};
         // vnode.attrs.value ? this.attributes.value = vnode.attrs.value : this.attributes.value = 0;//should be initial
-        vnode.attrs.min ? this.attributes.min = vnode.attrs.min : this.attributes.min = 0;
-        vnode.attrs.max ? this.attributes.max = vnode.attrs.max : this.attributes.max = 100;
+
         vnode.attrs.step ? this.attributes.step = vnode.attrs.step : this.attributes.step = 1;
 
         this.attributes.oninput = (e) => {
@@ -39,6 +38,9 @@ export class MdlSlider extends MdlBase {
     }
 
     view(vnode) {
+        vnode.attrs.min ? this.attributes.min = vnode.attrs.min : this.attributes.min = 0;
+        vnode.attrs.max ? this.attributes.max = vnode.attrs.max : this.attributes.max = 100;
+
         return (
             <input class={this.classList.join(" ")} type="range" {...this.attributes} value={this.currentValue} />
         )

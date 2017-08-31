@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlGrid extends MdlBase {
+export class Grid extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-grid");
@@ -16,7 +16,7 @@ export class MdlGrid extends MdlBase {
     }
 }
 
-export class MdlCell extends MdlBase {
+export class Cell extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-cell");

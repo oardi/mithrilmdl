@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlSpinner extends MdlBase {
+export class Spinner extends Base {
     oninit(vnode) {
         super.oninit(vnode);
     }

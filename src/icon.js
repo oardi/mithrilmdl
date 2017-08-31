@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlIcon extends MdlBase {
+export class Icon extends Base {
     oninit(vnode) {
         super.oninit(vnode);
 

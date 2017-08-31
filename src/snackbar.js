@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlSnackBar extends MdlBase {
+export class SnackBar extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-js-snackbar", "mdl-snackbar");
@@ -17,7 +17,7 @@ export class MdlSnackBar extends MdlBase {
     }
 }
 
-export class MdlSnackBarService {
+export class SnackBarService {
     constructor() { }
 
     show(message, timeout, actionText, actionHandler) {

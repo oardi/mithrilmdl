@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { MdlBase } from './base';
 
-export class MdlFooter extends MdlBase {
+export class Footer extends MdlBase {
     oninit(vnode) {
         super.oninit(vnode);
         vnode.attrs.mini ? this.classList.push("mdl-mini-footer") : null;

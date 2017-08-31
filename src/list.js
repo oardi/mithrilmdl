@@ -1,8 +1,8 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
-import { MdlIcon } from './mdl-icon';
+import { Base } from './base';
+import { Icon } from './icon';
 
-export class MdlList extends MdlBase {
+export class List extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list");
@@ -17,7 +17,7 @@ export class MdlList extends MdlBase {
     }
 }
 
-export class MdlListItem extends MdlBase {
+export class ListItem extends Base {
     oninit(vnode) {
         super.oninit(vnode);
 
@@ -52,14 +52,14 @@ export class MdlListItem extends MdlBase {
             >
                 {vnode.children}
                 {vnode.attrs.dropDown ?
-                    this.isDropDownCollapsed ? <MdlIcon icon="keyboard_arrow_down" class="toggle" /> : <MdlIcon icon="keyboard_arrow_up" class="toggle" />
+                    this.isDropDownCollapsed ? <Icon icon="keyboard_arrow_down" class="toggle" /> : <Icon icon="keyboard_arrow_up" class="toggle" />
                     : null}
             </li>
         )
     }
 }
 
-export class MdlListItemPrimaryContent extends MdlBase {
+export class ListItemPrimaryContent extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list__item-primary-content");
@@ -73,7 +73,7 @@ export class MdlListItemPrimaryContent extends MdlBase {
     }
 }
 
-export class MdlListItemSecondaryAction extends MdlBase {
+export class ListItemSecondaryAction extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list__item-secondary-action");
@@ -87,7 +87,7 @@ export class MdlListItemSecondaryAction extends MdlBase {
     }
 }
 
-export class MdlListItemSubTitle extends MdlBase {
+export class ListItemSubTitle extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list__item-sub-title");
@@ -102,7 +102,7 @@ export class MdlListItemSubTitle extends MdlBase {
 }
 
 //custom - innerhalb von mdl.list nutzen!
-export class MdlListSubHeader extends MdlBase {
+export class ListSubHeader extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list__subheader");
@@ -116,7 +116,7 @@ export class MdlListSubHeader extends MdlBase {
     }
 }
 
-export class MdlListItemText extends MdlBase {
+export class ListItemText extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-list__item-text-body");

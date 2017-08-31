@@ -1,8 +1,8 @@
 import m from 'mithril';
-import { MdlIcon } from './mdl-icon';
-import { MdlBase } from './mdl-base';
+import { Icon } from './icon';
+import { Base } from './base';
 
-export class MdlChip extends MdlBase {
+export class Chip extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-chip");
@@ -36,7 +36,7 @@ export class MdlChip extends MdlBase {
                         class="mdl-chip__action"
                         {...deleteAttributes}
                     >
-                        <MdlIcon icon={vnode.attrs.deleteIcon ? vnode.attrs.deleteIcon : "cancel"} />
+                        <Icon icon={vnode.attrs.deleteIcon ? vnode.attrs.deleteIcon : "cancel"} />
                     </button>
                     : null}
             </span>

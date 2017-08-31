@@ -1,9 +1,9 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
-import { MdlButton } from './mdl-button';
-import { MdlIcon } from './mdl-icon';
+import { Base } from './base';
+import { Button } from './button';
+import { Icon } from './icon';
 
-export class MdlToggle extends MdlBase {
+export class Toggle extends Base {
     constructor() {
         super();
         this.checked = false;
@@ -17,7 +17,7 @@ export class MdlToggle extends MdlBase {
         this.iconActive = vnode.attrs.iconActive ? vnode.attrs.iconActive : "check_box";
         this.iconInactive = vnode.attrs.iconInactive ? vnode.attrs.iconInactive : "check_box_outline_blank";
 
-        this.checked = vnode.attrs.checked;
+        this.checked = vnode.attrs.checked == true || vnode.attrs.checked == "true" ? true : false;
         this.oldAttrCheckedValue = vnode.attrs.checked;
 
         if (vnode.attrs.icon) {
@@ -65,9 +65,9 @@ export class MdlToggle extends MdlBase {
 
         return (
             <div>
-                <MdlButton icon onclick={(e) => { this.toggleInternal = true; vnode.attrs.onclick ? vnode.attrs.onclick(e) : null; }}>
-                    <MdlIcon icon={this.icon} color={this.color} />
-                </MdlButton>
+                <Button icon onclick={(e) => { this.toggleInternal = true; vnode.attrs.onclick ? vnode.attrs.onclick(e) : null; }}>
+                    <Icon icon={this.icon} color={this.color} />
+                </Button>
             </div>
         )
     }

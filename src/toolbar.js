@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlLayoutHeaderRow } from './mdl-layout';
+import { LayoutHeaderRow } from './layout';
 
-export class MdlToolbar {
+export class Toolbar {
     oninit(vnode) {
         this.vnode = vnode;
     }
@@ -19,7 +19,7 @@ export class MdlToolbar {
 
     view(vnode) {
         return (
-            <MdlLayoutHeaderRow>{vnode.children}</MdlLayoutHeaderRow>
+            <LayoutHeaderRow>{vnode.children}</LayoutHeaderRow>
         )
     }
 };

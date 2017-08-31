@@ -1,7 +1,7 @@
 import m from 'mithril';
-import { MdlBase } from './mdl-base';
+import { Base } from './base';
 
-export class MdlNavigation extends MdlBase {
+export class Navigation extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-navigation");
@@ -16,7 +16,7 @@ export class MdlNavigation extends MdlBase {
     }
 }
 
-export class MdlNavigationLink extends MdlBase {
+export class NavigationLink extends Base {
     oninit(vnode) {
         super.oninit(vnode);
         this.classList.push("mdl-navigation__link");
